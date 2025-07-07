@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/colorwhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.Intro_Activity">
+
+
+    <TextView
+        android:id="@+id/textview_escape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="رد شدن"
+        android:textSize="20dp"
+        android:textColor="@color/colorbalck"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:padding="20dp"
+        android:background="?selectableItemBackground"
+        >
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/textview_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="بعدی"
+        android:textSize="20dp"
+        android:textColor="@color/colorprimarydark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="20dp"
+        android:layout_margin="15dp"
+        android:background="?selectableItemBackground">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textview_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="قبلی"
+        android:textSize="20dp"
+        android:textColor="@color/colorprimary"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:padding="20dp"
+        android:layout_margin="15dp"
+        android:background="?selectableItemBackground"
+        >
+    </TextView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layoutDirection="ltr"
+        android:layout_toRightOf="@+id/textview_back"
+        android:layout_toLeftOf="@id/textview_next"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"
+        app:tabBackground="@drawable/bg_tab_layout"
+        android:layout_marginBottom="20dp"
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_marginTop="80dp"
+        android:layout_above="@+id/tablayout"
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TvOnline" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorprimary</item>
+        <item name="colorPrimaryVariant">@color/colorprimarydark</item>
+        <item name="colorOnPrimary">@color/coloraccent</item>
+        <item name="fontFamily">@font/ir</item>
+        <item name="android:fontFamily">@font/ir</item>
+    </style>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.TvOnline" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorprimary</item>
+        <item name="colorPrimaryVariant">@color/colorprimarydark</item>
+        <item name="colorOnPrimary">@color/coloraccent</item>
+        <item name="fontFamily">@font/ir</item>
+        <item name="android:fontFamily">@font/ir</item>
+        <item name="android:forceDarkAllowed">true</item>
+    </style>
+
+</resources>

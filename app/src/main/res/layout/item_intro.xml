@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        tools:src="@tools:sample/avatars"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+    </ImageView>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:id="@+id/textview_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="عنوان نوشته ها"
+            android:textColor="@color/colorbalck"
+            android:lineSpacingExtra="10dp"
+            android:gravity="center"
+            android:textSize="20dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/textview_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="توضیح نوشته ها"
+            android:textColor="@color/colorsubblack"
+            android:layout_marginTop="5dp"
+            android:lineSpacingExtra="10dp"
+            android:gravity="center"
+            android:textSize="15dp">
+        </TextView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
