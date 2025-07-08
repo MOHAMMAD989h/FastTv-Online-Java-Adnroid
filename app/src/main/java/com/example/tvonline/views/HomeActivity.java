@@ -119,15 +119,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             networkList.add(new Network("شبکه آی‌فیلم", R.drawable.ifilm));
             networkList.add(new Network("شبکه سلامت", R.drawable.health));
             networkList.add(new Network("شبکه افق", R.drawable.ofogh));
-            networkList.add(new Network("جام جم یک", R.drawable.jamejam));
             networkList.add(new Network("شبکه سهند", R.drawable.sahand));
             networkList.add(new Network("شبکه اردبیل", R.drawable.ardabil));
             networkList.add(new Network("شبکه آذربایجان غربی", R.drawable.urmia));
             networkList.add(new Network("شبکه اصفهان", R.drawable.isfahan));
             networkList.add(new Network("شبکه خوزستان", R.drawable.khozestan));
             networkList.add(new Network("شبکه فارس", R.drawable.fars));
-            networkList.add(new Network("العالم", R.drawable.alaalam));
-            networkList.add(new Network("شبکه پرس تیوی", R.drawable.press));
+
 
 
             NetworkAdapter networkAdapter = new NetworkAdapter(networkList);
@@ -267,11 +265,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             holder.itemView.setOnClickListener(v -> {
                 Log.d(TAG, "Clicked on network: " + network.getName()); // Log which network was clicked
 
-                // Base URL برای تلوبیون (ممکن است برای همه کانال‌ها یکسان نباشد)
-                // Telewebion often uses specific subdomains/paths for each channel's live stream.
-                // These URLs are derived from Telewebion's structure, but may require verification.
-                String telewebionCdnBase = "https://cdn.telewebion.com/"; // Often used
-                String telewebionCdnwBase = "https://cdnw.telewebion.com/"; // Also seen for some channels
+                String telewebionCdnBase = "https://cdn.telewebion.com/";
+                String telewebionCdnwBase = "https://cdnw.telewebion.com/";
 
                 String targetStreamUrl = null;
 
@@ -301,7 +296,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         targetStreamUrl = telewebionCdnBase + "quran/live/playlist.m3u8";
                         break;
                     case "شبکه مستند": // Shabake Mostanad
-                        targetStreamUrl = telewebionCdnBase + "doctv/live/playlist.m3u8"; // based on doctv.ir
+                        targetStreamUrl = telewebionCdnBase + "doctv/live/playlist.m3u8";
                         break;
                     case "شبکه سلامت": // Shabake Salamat
                         targetStreamUrl = telewebionCdnBase + "salamat/live/playlist.m3u8";
@@ -370,8 +365,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
                 if (targetStreamUrl != null) {
                     Intent intent = new Intent(v.getContext(), LivePlayerActivity.class);
-                    intent.putExtra("CHANNEL_NAME", network.getName()); // نام شبکه واقعی را ارسال کنید
-                    intent.putExtra("STREAM_URL", targetStreamUrl); // URL استریم را ارسال کنید
+                    intent.putExtra("CHANNEL_NAME", network.getName());
+                    intent.putExtra("STREAM_URL", targetStreamUrl);
                     v.getContext().startActivity(intent);
                     Log.d(TAG, "Starting LivePlayerActivity for " + network.getName() + " with URL: " + targetStreamUrl);
                 }
